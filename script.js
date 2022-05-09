@@ -20,6 +20,22 @@ for (var i = 0; i < names.length; i++) {
       ((plotai[i] * 1000000) / people[i]).toFixed(2) +
       " m2"
   );
+  console.log(
+    "\n" +
+      "Šalis: " +
+      names[i] +
+      ", joje gyvena " +
+      people[i] +
+      "gyventojų." +
+      "\n" +
+      "Šalies plotas yra " +
+      plotai[i] +
+      " km2" +
+      "\n" +
+      "Vidutinis plotas tenkantis vienam gyventojui: " +
+      ((plotai[i] * 1000000) / people[i]).toFixed(2) +
+      " m2"
+  );
   document.write(
     "<br>" + "======================================================="
   );
@@ -36,6 +52,8 @@ document.write(
     "<br>"
 );
 
+console.log("********************   Antra dalis  ***********************");
+
 var countries = [
   { name: "Čilė", plotas: 756000, count: 16000000 },
   { name: "Mauritius", plotas: 2040, count: 1265000 },
@@ -45,12 +63,6 @@ var countries = [
 ];
 
 for (var x of countries) {
-  console.log(
-    `${x.name} vidutinis plotas gyventojui: ${(
-      (x.plotas * 1000000) /
-      x.count
-    ).toFixed(2)}`
-  );
   document.write(
     `<br>Šalis: ${x.name}, joje gyvena ${
       x.count
@@ -65,5 +77,17 @@ for (var x of countries) {
     "<br>" +
       "--------------------------------------------------------------------------------" +
       "<br>"
+  );
+}
+for (var x of countries) {
+  console.log(
+    `\n Šalis: ${x.name} , joje gyvena ${
+      x.count
+    } gyventojų. \n Šalies plotas yra ${
+      x.plotas
+    } km2 \n vidutinis plotas gyventojui: ${(
+      (x.plotas * 1000000) /
+      x.count
+    ).toFixed(2)} m2`
   );
 }
