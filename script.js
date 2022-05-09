@@ -18,7 +18,7 @@ for (var i = 0; i < names.length; i++) {
       "<br>" +
       " Vidutinis plotas tenkantis vienam gyventojui: " +
       ((plotai[i] * 1000000) / people[i]).toFixed(2) +
-      " km2"
+      " m2"
   );
   document.write(
     "<br>" + "======================================================="
@@ -59,7 +59,7 @@ for (var x of countries) {
     } km2. <br> Vidutinis plotas tenkantis vienam gyventojui: ${(
       (x.plotas * 1000000) /
       x.count
-    ).toFixed(2)} km2`
+    ).toFixed(2)} m2`
   );
   document.write(
     "<br>" +
